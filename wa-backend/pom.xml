@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.sh.wa</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>wa-parent</artifactId>
+	</parent>
+
+	<artifactId>wa-backend</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<jackson.version>2.7.5</jackson.version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+
+	<dependencies>
+
+		<!-- Other modules dependencies ************************ -->
+		<!-- *************************************************** -->
+		<dependency>
+			<groupId>com.sh.wa</groupId>
+			<artifactId>wa-bpm</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sh.wa</groupId>
+			<artifactId>wa-backend-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sh.wa</groupId>
+			<artifactId>wa-backend-security</artifactId>
+		</dependency>
+
+		<!-- Spring framework dependencies ********************** -->
+		<!-- **************************************************** -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<!-- JavaEE dependencies ********************************* -->
+		<!-- ***************************************************** -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Validation dependencies ****************************** -->
+		<!-- ****************************************************** -->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
+		<!-- Testing dependencies ****************************** -->
+		<!-- *************************************************** -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>
